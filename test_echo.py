@@ -4,15 +4,14 @@ BASE_URL = "https://postman-echo.com"
 
 
 def test_get_returns_query_params():
-    """GET /get должен вернуть квери-параметры в поле args (намеренно сломано)."""
+    """GET /get должен вернуть квери-параметры в поле args."""
     url = f"{BASE_URL}/get"
     params = {"foo": "bar", "num": "1"}
     response = requests.get(url, params=params)
 
     assert response.status_code == 200
     data = response.json()
-    # здесь специально неверное ожидание
-    assert data["args"]["foo"] == "wrong"
+    assert data["args"]["foo"] == "bar"
     assert data["args"]["num"] == "1"
 
 
