@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Aug 27 21:10:48 UTC 2026","Thu Aug 27 21:10:48 UTC 2026","148","","test_echo_allure","","","","POST /post - возврат form-data","Тест проверяет, что POST /post с form-data возвращает поля в поле form"
+"passed","Thu Aug 27 21:10:48 UTC 2026","Thu Aug 27 21:10:48 UTC 2026","134","","test_echo_allure","","","","POST /post - возврат JSON тела","Тест проверяет, что POST /post с JSON возвращает тело в поле json"
+"passed","Thu Aug 27 21:10:48 UTC 2026","Thu Aug 27 21:10:48 UTC 2026","130","","test_echo_allure","","","","POST /post - urlencoded параметры","Тест проверяет, что POST /post с urlencoded параметрами попадает в поле form"
+"passed","Thu Aug 27 21:10:48 UTC 2026","Thu Aug 27 21:10:48 UTC 2026","191","","test_echo_allure","","","","GET /get - возврат query параметров","Тест проверяет, что GET /get возвращает query-параметры в поле args"
+"passed","Thu Aug 27 21:10:48 UTC 2026","Thu Aug 27 21:10:48 UTC 2026","133","","test_echo_allure","","","","GET /get - эхо заголовков","Тест проверяет, что GET /get отражает пользовательские заголовки"
