@@ -27,6 +27,11 @@ jobs:
         run: |
           pytest test_echo_allure.py --alluredir=./allure-results -v
       
+      - name: Install Allure CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y allure
+      
       - name: Generate Allure report
         run: |
           allure generate ./allure-results --clean -o ./allure-report
