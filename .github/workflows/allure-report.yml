@@ -27,19 +27,17 @@ jobs:
         run: |
           pytest test_echo_allure.py --alluredir=./allure-results -v
       
-      - name: Download and setup Allure
-        uses: simple-elf/allure-report-action@master
-        with:
-          allure_results: allure-results
-      
       - name: Generate Allure report
-        run: |
-          allure generate ./allure-results --clean -o ./allure-report
+        uses: simple-elf/allure-report-action@v1.7
+        with:
+          gh_pages: true
+          allure_results: allure-results
+          allure_history: allure-history
       
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
-          publish_dir: ./allure-report
+          publish_dir: ./allure-history
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
